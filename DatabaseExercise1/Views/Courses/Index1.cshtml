@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index1";
+}
+
+<h2>Index1</h2>
+
+@model IEnumerable<DatabaseExercise1.Models.Course>
+<table>
+    <tr style="border:1px solid green; margin:5px;">
+        <th style="border:1px solid green">Course Id</th>
+        <th style="border:1px solid green">Course Name</th>
+        <th style="border:1px solid green">Course Hours</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr style="border:1px solid green; margin:5px;">
+            <td style="border:1px solid green">@item.Id</td>
+            <td style="border:1px solid green">@item.Name</td>
+            <td style="border:1px solid green">@item.Hours</td>
+        </tr>
+    }
+</table>
